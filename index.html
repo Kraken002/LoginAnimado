@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>página de login com animação</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  
+  <div class="container" id="container">
+<div class="formularioContainer signUp">
+<form action="#">
+  <h1>Criar Conta</h1>
+
+<span>Se registre usando seu email</span>
+<input type="text" placeholder="Nome">
+<input type="email" placeholder="email">
+<input type="password" placeholder="Senha">
+<button>Registrar</button>
+</form>
+</div>
+
+<div class="formularioContainer sigIn">
+<form action="#">
+  <h1>Faça Login</h1>
+<span>Use sua conta</span>
+<input type="email" placeholder="email">
+<input type="password" placeholder="Senha">
+<a href="#">Esqueci a senha</a>
+<button>Login</button>
+</form>
+</div>
+
+
+<div class="sobreposição-container">
+<div class="sobreposição">
+<div class="painel-sobreposição sobreposição-esquerda">
+<h1>Bem-vindo de volta!</h1>
+<p>Para permanecer conectado faça login com seus dados</p>
+<button class="ghost" id="login">Fazer Login</button>
+</div>
+<div class="painel-sobreposição sobreposição-direita">
+  <h1>Olá</h1>
+  <p>Use seus dados pessoais para abrir uma nova conta</p>
+  <button class="ghost" id="registro">Registrar</button>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+
+const signUpButton = document.getElementById('registro');
+const signInButton = document.getElementById('login');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+  container.classList.add("painel-direito-active");
+});
+
+signInButton.addEventListener('click', () => {
+  container.classList.remove("painel-direito-active");
+});
+
+
+</script>
+
+</body>
+
+
+</html>
